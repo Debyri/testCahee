@@ -59,3 +59,11 @@
         width: 95%;
     }
 }
+
+
+@media screen and (max-width: 540px) {
+    .what {
+        display: flex;
+        flex-direction: column;
+    }
+}
