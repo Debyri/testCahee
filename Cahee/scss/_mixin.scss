@@ -1,0 +1,50 @@
+@mixin linkStyle ($color: #000000) {
+    text-decoration: none;
+    color: $color;
+}
+
+@mixin displayFlex ($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: wrap;
+}
+
+@mixin fontFam ($color: #000000, $weight: 400) {
+    font-family: 'Raleway', serif;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin btnStyle ($bgColor, $color) {
+    border: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    @include fontFam($color, 400);
+    background-color: $bgColor;
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.3);
+    cursor: pointer;
+}
+
+@mixin headerStyle ($color, $weight) {
+    @include fontFam($color, $weight);
+    text-transform: capitalize;
+}
+
+@mixin bgPosition () {
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+@mixin mediaPadding ($px: 0) {
+    padding: $px 20px;
+
+    @media screen and (min-width: 720px) {
+        padding: $px 0;
+    }
+}
+
+@mixin inputReset {
+    border: none;
+    outline: none;
+}

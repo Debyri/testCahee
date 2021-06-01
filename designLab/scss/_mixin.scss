@@ -1,0 +1,50 @@
+@mixin bgPosition {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin flexDir ($direction: 'column') {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin textStyle ($color, $weight) {
+    text-align: center;
+    color: $color;
+    font-weight: $weight;
+    font-family: 'Lato', serif;
+}
+
+@mixin borderStyle ($color: #000000) {
+    border-right: 1px solid $color;
+    border-bottom: 1px solid $color;
+    border-left: 1px solid $color;
+}
+
+@mixin lines ($color: #000000) {
+    width: 200px;
+    height: 1px;
+    background-color: $color;
+}
+
+@mixin headerWrapperPos {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    left: 0;
+}
+
+@mixin wrapper {
+    width: 700px;
+    padding: 30px 30px;
+    @include textStyle (#000000, 300);
+    position: relative;
+}
+
+@mixin sectionText ($color: #000000) {
+    width: 75%;
+    margin: 20px auto;
+    font-size: 14px;
+    color: $color;
+}

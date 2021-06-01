@@ -1,0 +1,27 @@
+.contact {
+    margin: 60px auto 40px;
+    @include wrapper;
+    @include borderStyle;
+
+    &__text {
+        @include sectionText;
+    }
+
+    &__btn {
+        width: 50%;
+        padding: 15px;
+        background-color: #3c3c3c;
+        @include textStyle (#ffffff, 300);
+        text-transform: uppercase;
+        border: none;
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    @include textStyle (#000000, 300);
+    font-size: 12px;
+    margin: 20px 20px;
+}
+

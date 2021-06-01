@@ -1,0 +1,156 @@
+.contact-us {
+    @include bgPosition;
+    background-image: url(../images/contactUs/main-bg.png);
+    margin: 0;
+    padding-top: 20px;
+
+    & > .container {
+        width: 80%;
+        @include mediaPadding (40px);
+    }
+        
+    &__header {
+        text-align: center;
+        font-size: 40px;
+        text-transform: capitalize;
+        @include headerStyle (#000000, 800)
+    }
+
+    &__subheader {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        @include fontFam (#000000, 300);
+        width: 80%;
+        margin: 20px auto;
+
+        @media screen and (min-width: 540px) {
+            width: 40%;
+            margin: 20px auto;
+        }
+    }
+}
+@media screen and (min-width: 540px) {
+    .contact-us__content {
+        @include displayFlex(row);
+        justify-content: space-between;
+    }
+    
+}
+
+.content__form {
+    @include displayFlex (column);
+    padding: 10px;
+    width: 100%;
+    @media screen and (min-width: 540px) {
+        width: 40%;
+    }
+    
+
+    &-input {
+        @include inputReset;
+        margin-top: 20px;
+        background-color: rgba(0, 196, 196, .5);
+        color: #ffffff;
+        padding: 10px;
+
+        &:nth-child(1) {
+            margin: 0;
+        }
+
+        &::placeholder {
+            color: #ffffff;
+        }
+
+        &:focus {
+            background-color: #00c4c4;
+            border-left: 3px solid #355b82;
+            padding-left: 8px;
+        }
+    }
+    &-textarea {
+        height: 150px;
+        @include fontFam (#ffffff, 400);
+    }
+}
+
+.info {
+    margin: 20px;
+
+    &--layout {
+        margin-top: 20px;
+
+        &:first-of-type {
+            margin: 0;
+        }
+    }
+
+    &__header {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        @include headerStyle (#000000, 700);
+        margin: 0;
+        font-style: initial;
+    }
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 2px;
+        font-style: initial;
+        @include headerStyle (#000000, 300);
+
+        &--black {
+            color: #000000;
+        }
+        &:hover {
+            color: rgba(0, 196, 196, 1);
+        }
+    }
+}
+
+.footer {
+    background-color: #262626;
+    color: #b9b9b9;
+    font-size: 0.8rem;
+    font-weight: 300;
+    width: 100%;
+    @include displayFlex (column);
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 540px) {
+        @include displayFlex (row);
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__copyright, &__author {
+        width: 40%;
+        font-style: initial;
+        @media screen and (min-width: 540px) {
+            width: 20%;
+        }
+
+    }
+
+    &__logo {
+        fill: #b9b9b9;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__link {
+        
+        text-decoration: none;
+        color: #b9b9b9;
+
+        &:hover {
+            color: rgb(0, 196, 196)
+        }
+    }
+}
+
+.red-text {
+    color: red;
+    font-weight: 700;
+}

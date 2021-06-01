@@ -1,0 +1,77 @@
+.intro.container {
+    position: relative;
+}
+
+.intro__header {
+    height: 60px;
+    @include displayFlex (row);
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+
+.header {    
+    &__logo {
+        width: 50px;
+        height: auto;
+
+        @media screen and (min-width: 540px) {
+            width: 70px;
+        }
+    }
+
+    &__nav {
+        @include displayFlex (row);
+        justify-content: space-evenly;
+
+        &-link {
+            text-align: center;
+            font-size: 14px;
+            padding: 3px;
+            @include linkStyle ();
+            @include fontFam (#000000, 700);
+            border-top: 2px solid transparent;
+            text-transform: uppercase;
+            transition: ease-in-out .2s;
+
+            &:hover {
+                border-top: 2px solid #ff6033;
+
+            }
+        }
+    }
+}
+
+.drop-down {
+
+    position: initial;
+    display: inline-block;
+
+    & li {
+        display: inline-block;
+    }
+
+    &__wrapper {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .drop-down__wrapper {
+        position: relative;
+    }
+    
+    .drop-down {
+        display: none;
+        position: absolute;
+        left: -30px;
+    
+        &__item {
+            margin-top: 5px;
+        }
+    }
+    .drop-down__wrapper:hover > .drop-down {
+        display: block;
+    }
+}

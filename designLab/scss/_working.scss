@@ -1,0 +1,46 @@
+.working {
+    width: 45%;
+    margin: 0px auto;
+    @include textStyle (#ffffff, 400);
+
+    &-wrapper {
+        padding-top: 150px;
+        background-image: url(../assets/images/hero-bg.jpg.png);
+        background-color: #a7b2c6;
+        @include bgPosition;
+        background-attachment: fixed;
+        height: 100vh;
+        text-transform: uppercase;
+
+        .icon-scroll {
+            margin-top: 220px;
+            font-size: 30px;
+        }
+    }
+
+    .logo {
+        margin: 0 auto;
+        width: 48px;
+        height: 50px;
+        background-image: url(../assets/labIcons/logo.svg);
+        @include bgPosition;
+    }
+}
+
+.working-header {
+    &__heading {
+        margin-top: 60px;
+        letter-spacing: 10px;
+        span {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    &__caption {
+        margin: 20px auto;
+        font-size: 11px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+}

@@ -1,0 +1,44 @@
+.subscribe {
+    @include bgPosition;
+            background-image: url('../images/subscribe/subscribe-bg.png');
+    & > .container {
+        display: none;
+
+        @media screen and (min-width: 720px) {
+            display: block;
+            
+            padding: 80px 0;
+        }
+    }
+    
+    &__header {
+        @include headerStyle (#000000, 700);
+    }
+
+    &__subheader {
+        @include fontFam (#000000, 400);
+        margin-top: 20px;
+        width: 60%;
+    }
+
+    &__form {
+        width: 70%;
+        margin-top: 20px;
+        @include displayFlex (row);
+        justify-content: space-between;
+    }
+
+    &__input {
+        outline: none;
+        border-radius: unset;
+        border: 1px solid #000000;
+        padding: 5px 20px;
+        width: 70%;
+        @include fontFam (#c5c5c5, 300);
+    }
+
+    &__btn {
+        @include btnStyle (#96b92c, #ffffff);
+    }
+}
+

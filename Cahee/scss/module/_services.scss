@@ -1,0 +1,79 @@
+.services {
+    background-color: #70bfff;
+    @include mediaPadding (20px);
+
+    
+    & > .container {
+        @include displayFlex (column);
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 720px){
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    &__header {
+        @include displayFlex (column);
+        justify-content: center;
+        margin: 0 auto;
+
+        @media screen and (min-width: 720px){
+            padding: 150px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            background-image: url(../images/services/tomato-bg.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__header-text {
+        text-align: center;
+        @include headerStyle (#ffffff, 800);
+        font-size: 35px;
+
+        @media screen and (min-width: 720px) {
+            font-size: 60px;
+        }
+    }
+
+    &__list {
+        margin: 0 auto;
+        @include displayFlex (column);
+        justify-content: center;
+        align-items: center;
+
+        &-item {
+            padding: 15px 15px;
+            @include displayFlex ();
+            @include fontFam (#000000, 600);
+            text-transform: capitalize;
+            font-size: 16px;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            width: 300px;
+            margin-top: 20px;
+            box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+
+            .item-name {
+                width: 80%;
+                text-align: center;
+            }
+
+            .item-icon {
+                font-size: 25px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 720px) {
+    .services__list-item:nth-child(1){
+        margin-top: 0;
+    }
+}

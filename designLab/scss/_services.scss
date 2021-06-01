@@ -1,0 +1,31 @@
+.services {
+    @include wrapper;
+    @include borderStyle (#ffffff);
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+   
+
+    &__header {
+        letter-spacing: 10px;
+        font-size: 30px;
+        height: 30px;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    
+    &__text {
+        @include sectionText (#ffffff);
+    }
+
+    .line {
+        @include lines (#ffffff);
+    }
+}
+
+.services-wrapper {
+    background-image: url(../assets/images/hero-bg.jpg.png);
+    @include bgPosition;
+    background-attachment: fixed;
+    padding: 50px 100px;
+}

@@ -1,0 +1,43 @@
+.what {
+    @include wrapper;
+    @include borderStyle (#000000);
+    margin: 100px auto 60px;
+    @include flexDir (column);
+
+    &-card {
+        margin: 30px auto 0;
+        width: 60%;
+    
+        &__header {
+            margin-top: 20px;
+            @include textStyle (#000000, 400);
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+    
+        &__text {
+            margin-top: 20px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+    
+    &-card__logo {
+        font-size: 40px;
+    }
+
+    &__header {
+        letter-spacing: 5px;
+        font-size: 30px;
+        height: 30px;
+        text-transform: uppercase;
+        word-spacing: 5px;
+    }
+}
+
+.what__header-wrapper {
+    @include headerWrapperPos;
+    @include flexDir (row);
+    justify-content: space-between;
+    align-items: center;
+}

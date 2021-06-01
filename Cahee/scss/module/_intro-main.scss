@@ -1,0 +1,50 @@
+.intro {
+    height: 100vh;
+    background-image: url(../images/freshLife/intro-bg.png);
+    @include bgPosition;
+
+    &__main {
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        @include displayFlex (column);
+        justify-content: center;
+        align-items: center;
+        
+
+        @media screen and (min-width: 540px) {
+            width: 80%;
+        }
+    
+        @media screen and (min-width: 720px) {
+            width: 60%;
+    
+        }
+    
+        @media screen and (min-width: 720px) {
+            width: 50%;
+        }
+
+        @media screen and (min-width: 960px) {
+            width: 25%;
+        }
+    }
+}
+
+.content {
+    &__header {
+        @include headerStyle (#000000, 900);
+        font-size: 35px;
+    }
+
+    &__text {
+        @include fontFam (#000000, 300);
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    &__btn {
+        @include btnStyle (#ff6033, #ffffff);
+        margin-top: 20px;
+    }
+}

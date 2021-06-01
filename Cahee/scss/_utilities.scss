@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+
+    @media screen and (min-width: 540px) {
+        width: 80%;
+    }
+
+}
+
+li {
+    list-style: none;
+}
+
+.btn {
+    border: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-family: 'Raleway', serif;
+    font-weight: normal;
+}

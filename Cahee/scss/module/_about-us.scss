@@ -1,0 +1,43 @@
+.about-us > .container {
+    @include displayFlex (row);
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-us {
+    background-color: #00b1b1;
+    @include mediaPadding (20px);
+
+    &__img-wrapper {
+        width: 50%;
+        display: none;
+
+        @media screen and (min-width: 720px) {
+            display: initial;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        &-header {
+            @include headerStyle (#ffffff, 700);
+             font-size: 50px;
+        }
+
+        &-text {
+            @include fontFam (#ffffff, 300);
+            font-size: 14px;
+            line-height: 25px;
+        }
+        
+    @media screen and (min-width: 720px) {
+        width: 50%;
+    }
+    }
+}
+
