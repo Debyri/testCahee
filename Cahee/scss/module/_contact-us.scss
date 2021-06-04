@@ -110,10 +110,10 @@
 
 .footer {
     background-color: #262626;
-    color: #b9b9b9;
     font-size: 0.8rem;
-    font-weight: 300;
+    @include fontFam (#b9b9b9, 300);
     width: 100%;
+    padding: 10px;
     @include displayFlex (column);
     justify-content: center;
     align-items: center;
@@ -127,6 +127,7 @@
     &__copyright, &__author {
         width: 40%;
         font-style: initial;
+        text-align: center;
         @media screen and (min-width: 540px) {
             width: 20%;
         }

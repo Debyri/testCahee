@@ -94,7 +94,10 @@ li {
   .drop-down {
     display: none;
     position: absolute;
-    left: -30px;
+    left: -50px;
+    top: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 3px 10px 10px;
   }
   .drop-down__item {
     margin-top: 5px;
@@ -735,10 +738,12 @@ li {
 
 .footer {
   background-color: #262626;
-  color: #b9b9b9;
   font-size: 0.8rem;
+  font-family: "Raleway", serif;
   font-weight: 300;
+  color: #b9b9b9;
   width: 100%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -757,6 +762,7 @@ li {
 .footer__copyright, .footer__author {
   width: 40%;
   font-style: initial;
+  text-align: center;
 }
 @media screen and (min-width: 540px) {
   .footer__copyright, .footer__author {

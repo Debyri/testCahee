@@ -65,7 +65,10 @@
     .drop-down {
         display: none;
         position: absolute;
-        left: -30px;
+        left: -50px;
+        top: 15px;
+        background-color: rgba(0,0,0, .3);
+        padding: 10px 3px 10px 10px; 
     
         &__item {
             margin-top: 5px;
